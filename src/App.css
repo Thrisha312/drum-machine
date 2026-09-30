@@ -1,0 +1,171 @@
+/* ===== GLOBAL ===== */
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #111315;
+    color: #f5f5f5;
+}
+
+/* ===== MAIN CONTAINER ===== */
+
+.drum-machine {
+    max-width: 900px;
+    margin: 45px auto;
+    padding: 40px;
+    background: #1a1d21;
+    border: 1px solid #30343a;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+}
+
+/* ===== TITLE ===== */
+
+.drum-machine h1 {
+    margin: 0 0 28px;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: #ffffff;
+}
+
+/* ===== DISPLAY ===== */
+
+.display {
+    background: #0d0f11;
+    border: 1px solid #3a3f46;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 28px;
+}
+
+.display h2 {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #e7b65c;
+    font-weight: 600;
+}
+
+.display p {
+    margin: 5px;
+    color: #aeb4bc;
+    font-size: 14px;
+}
+
+/* ===== CONTROLS ===== */
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.controls label {
+    color: #d4d7dc;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* ===== VOLUME SLIDER ===== */
+
+.controls input {
+    width: 200px;
+    accent-color: #e7b65c;
+    cursor: pointer;
+}
+
+/* ===== POWER BUTTON ===== */
+
+.controls button {
+    padding: 10px 20px;
+    border: 1px solid #e7b65c;
+    border-radius: 8px;
+    background: #25282d;
+    color: #e7b65c;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.controls button:hover {
+    background: #e7b65c;
+    color: #111315;
+}
+
+/* ===== DRUM GRID ===== */
+
+.drum-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+/* ===== DRUM PADS ===== */
+
+.drum-pad {
+    height: 135px;
+    border: 1px solid #353a41;
+    border-radius: 12px;
+    background: #202328;
+    color: white;
+    cursor: pointer;
+    transition: 0.15s ease;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.25);
+}
+
+.drum-pad span {
+    display: block;
+    font-size: 32px;
+    font-weight: 700;
+    color: #e7b65c;
+    margin-bottom: 8px;
+}
+
+.drum-pad small {
+    font-size: 14px;
+    color: #aeb4bc;
+}
+
+/* ===== HOVER ===== */
+
+.drum-pad:hover {
+    border-color: #e7b65c;
+    background: #272b31;
+    transform: translateY(-3px);
+}
+
+/* ===== ACTIVE PAD ===== */
+
+.drum-pad.active {
+    border-color: #e7b65c;
+    background: #302a1d;
+    box-shadow: 0 0 22px rgba(231, 182, 92, 0.35);
+    transform: scale(1.03);
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 600px) {
+
+    .drum-machine {
+        margin: 20px;
+        padding: 22px;
+    }
+
+    .drum-machine h1 {
+        font-size: 24px;
+    }
+
+    .drum-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .drum-pad {
+        height: 115px;
+    }
+}
